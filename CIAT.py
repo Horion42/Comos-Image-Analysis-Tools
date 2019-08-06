@@ -464,7 +464,7 @@ def PDF(cutout):
 
 # folder where you store all the images
     
-imageFolder='/Volumes/bob/Stage/Lam/IMAGE/all_mosaique/'
+imageFolder=''
 
 
 # Name of the ASCII file where the list of input objects is stored.
@@ -472,7 +472,7 @@ imageFolder='/Volumes/bob/Stage/Lam/IMAGE/all_mosaique/'
 # must be included. The table can contain other columns, 
 # which will be ignored here.
 
-targetlist='/Users/basilehusquinet/Documents/Stage/L2/targetlist_Caitlin.txt'
+targetlist=''
 
 # Type of coordinates (equatorial, galatic etc...)
 frame='fk5'
@@ -480,7 +480,7 @@ frame='fk5'
 # name of your all filters, 
 # WARNING the name must appear in the name of the associated image, since we look in imageFolder for a file with this string in the name
 
-filters=['HSC_i','HSC_z','UVISTA_Y','UVISTA_J','UVISTA_H','UVISTA_Ks','irac.1','irac.2']
+filters=['']
 
 # the HDU to be opened in the FITS file `imagefile`
 
@@ -495,19 +495,19 @@ hdu=0
 # zero point of your image,
 #(the list must have the same number as filters !!!!!!!!!!!!!)
 
-zeroPoint=[27.,27.,30.,30.,30.,30.,21.58,21.58]
+zeroPoint=[]
 
 # gain for each image, used for the uncertainties. 
 # If you have a infinite gain, note 0. by sextractor convention.
 # (the list must have the same number as filters !!!!!!!!!!!!!)
 
-gain=[18.5,12.1,0.,0.,0.,0.,0.,0.]
+gain=[]
 
 # radius of the aperture for each image in arcsecond. 
 # It will be use to perform the aperture photometry.
 #(the list must have the same number as filter!!!!!!!!!!!!!)
 
-radius=[1.,1.,1.,1.,1.,1.,1.4,1.4]
+radius=[]
 
 
 #saveTbl: table with the aperture fluxes
@@ -541,7 +541,7 @@ saveFits=True ; savePDF=True
 stacking=True
 
 # wavelenght of your filters
-wavelenght=[7741., 8912., 10214.2, 12534.6, 16453.4, 21539.9, 36000., 45000.]
+wavelenght=[]
 
 # radius transpose arcsec in pixel
 radiusStack=np.zeros(np.size(filters))
